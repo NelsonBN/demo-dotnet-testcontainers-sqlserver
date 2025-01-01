@@ -1,0 +1,33 @@
+@Host = http://localhost:8080
+
+GET {{Host}}/products
+Accept: application/json
+
+###
+
+GET {{Host}}/products/25
+Accept: application/json
+
+###
+
+POST {{Host}}/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "quantity": 1012
+}
+
+###
+
+PUT {{Host}}/products/25
+Content-Type: application/json
+
+{
+    "name": "Product 122",
+    "quantity": 10
+}
+
+###
+
+DELETE {{Host}}/products/27
